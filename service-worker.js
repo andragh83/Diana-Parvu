@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/andragh83/Diana-Parvu/precache-manifest.a18e940d75d22a68470614cb27e7293e.js"
+  "/andragh83/DianaParvu/precache-manifest.b2541762337992db1e35c37ff545307b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/andragh83/Diana-Parvu/index.html", {
+workbox.routing.registerNavigationRoute("/andragh83/DianaParvu/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

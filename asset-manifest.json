@@ -1,5 +1,5 @@
 {
-  "main.css": "/DianaParvu/static/css/main.721b6759.chunk.css",
+  "main.css": "/DianaParvu/static/css/main.b207e8a7.chunk.css",
   "main.js": "/DianaParvu/static/js/main.8ca2cdbd.chunk.js",
   "main.js.map": "/DianaParvu/static/js/main.8ca2cdbd.chunk.js.map",
   "runtime~main.js": "/DianaParvu/static/js/runtime~main.5c9e4ad7.js",
@@ -7,9 +7,9 @@
   "static/js/2.b8387c16.chunk.js": "/DianaParvu/static/js/2.b8387c16.chunk.js",
   "static/js/2.b8387c16.chunk.js.map": "/DianaParvu/static/js/2.b8387c16.chunk.js.map",
   "index.html": "/DianaParvu/index.html",
-  "precache-manifest.b5d701a17f50677ea2030e643687d59e.js": "/DianaParvu/precache-manifest.b5d701a17f50677ea2030e643687d59e.js",
+  "precache-manifest.315df140005da362c5e367358d3ba8a5.js": "/DianaParvu/precache-manifest.315df140005da362c5e367358d3ba8a5.js",
   "service-worker.js": "/DianaParvu/service-worker.js",
-  "static/css/main.721b6759.chunk.css.map": "/DianaParvu/static/css/main.721b6759.chunk.css.map",
+  "static/css/main.b207e8a7.chunk.css.map": "/DianaParvu/static/css/main.b207e8a7.chunk.css.map",
   "static/media/Cover3.png": "/DianaParvu/static/media/Cover3.6bd5459b.png",
   "static/media/Diana1.jpg": "/DianaParvu/static/media/Diana1.ef92fede.jpg",
   "static/media/Diana5.jpg": "/DianaParvu/static/media/Diana5.9426e4e0.jpg",

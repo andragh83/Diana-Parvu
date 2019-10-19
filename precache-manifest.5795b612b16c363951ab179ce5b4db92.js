@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaWorkshop2.b54ff61a.jpg"
   },
   {
-    "revision": "bfadb0d59abdd52e58ce",
+    "revision": "0950f8bd83639347657a",
     "url": "/DianaParvu/static/css/main.282f8867.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaLifestyle.1ab1a45b.jpg"
   },
   {
-    "revision": "bfadb0d59abdd52e58ce",
-    "url": "/DianaParvu/static/js/main.6c4d0b28.chunk.js"
+    "revision": "0950f8bd83639347657a",
+    "url": "/DianaParvu/static/js/main.896b9d81.chunk.js"
   },
   {
     "revision": "c5e71ee9f4757f67e8e31ae27ba9ea64",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/Cover3.6bd5459b.png"
   },
   {
-    "revision": "a36aa8a63d6aff2f6f9890316ff0aacc",
+    "revision": "b4a0fe7ba53502a6a8aa6f0bd8e5bb8f",
     "url": "/DianaParvu/index.html"
   }
 ];

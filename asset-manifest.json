@@ -1,21 +1,21 @@
 {
   "main.css": "/DianaParvu/static/css/main.772af019.chunk.css",
-  "main.js": "/DianaParvu/static/js/main.30ffd393.chunk.js",
-  "main.js.map": "/DianaParvu/static/js/main.30ffd393.chunk.js.map",
+  "main.js": "/DianaParvu/static/js/main.53b10b39.chunk.js",
+  "main.js.map": "/DianaParvu/static/js/main.53b10b39.chunk.js.map",
   "runtime~main.js": "/DianaParvu/static/js/runtime~main.5c9e4ad7.js",
   "runtime~main.js.map": "/DianaParvu/static/js/runtime~main.5c9e4ad7.js.map",
   "static/js/2.38862273.chunk.js": "/DianaParvu/static/js/2.38862273.chunk.js",
   "static/js/2.38862273.chunk.js.map": "/DianaParvu/static/js/2.38862273.chunk.js.map",
   "index.html": "/DianaParvu/index.html",
-  "precache-manifest.5b46edb8dbda34358e0e55a4d1b85fd7.js": "/DianaParvu/precache-manifest.5b46edb8dbda34358e0e55a4d1b85fd7.js",
+  "precache-manifest.d8ace8cd12478a795721fcd8ceada867.js": "/DianaParvu/precache-manifest.d8ace8cd12478a795721fcd8ceada867.js",
   "service-worker.js": "/DianaParvu/service-worker.js",
   "static/css/main.772af019.chunk.css.map": "/DianaParvu/static/css/main.772af019.chunk.css.map",
   "static/media/Cover3.png": "/DianaParvu/static/media/Cover3.6bd5459b.png",
-  "static/media/Diana1.jpg": "/DianaParvu/static/media/Diana1.ef92fede.jpg",
-  "static/media/Diana5.jpg": "/DianaParvu/static/media/Diana5.9426e4e0.jpg",
   "static/media/DianaCameraVideo.jpg": "/DianaParvu/static/media/DianaCameraVideo.9e4cc38b.jpg",
   "static/media/DianaLifestyle.jpg": "/DianaParvu/static/media/DianaLifestyle.1ab1a45b.jpg",
-  "static/media/DianaVlog.jpg": "/DianaParvu/static/media/DianaVlog.c5e71ee9.jpg",
+  "static/media/DianaVlog2.jpg": "/DianaParvu/static/media/DianaVlog2.5c80e879.jpg",
   "static/media/DianaWorkshop.jpg": "/DianaParvu/static/media/DianaWorkshop.d2ef1a0c.jpg",
-  "static/media/DianaWorkshop2.jpg": "/DianaParvu/static/media/DianaWorkshop2.b54ff61a.jpg"
+  "static/media/DianaWorkshop2.jpg": "/DianaParvu/static/media/DianaWorkshop2.b54ff61a.jpg",
+  "static/media/Vlog2.JPG": "/DianaParvu/static/media/Vlog2.6beae242.JPG",
+  "static/media/Vlog3.JPG": "/DianaParvu/static/media/Vlog3.c160a28a.JPG"
 }

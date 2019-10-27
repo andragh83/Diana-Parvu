@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaVlog2.5c80e879.jpg"
   },
   {
-    "revision": "3736b2654e83964ae1c1",
+    "revision": "c9635f6115b4964d0e56",
     "url": "/DianaParvu/static/css/main.64fc9a07.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/js/runtime~main.5c9e4ad7.js"
   },
   {
-    "revision": "1d80a5a0796a7b8c4fac",
-    "url": "/DianaParvu/static/js/2.84f0ed92.chunk.js"
+    "revision": "8f2b8c617988dfa28050",
+    "url": "/DianaParvu/static/js/2.56dfa8e2.chunk.js"
   },
   {
     "revision": "d2ef1a0c5955e2a8efaa4c9159acb09f",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaWorkshop2.b54ff61a.jpg"
   },
   {
-    "revision": "3736b2654e83964ae1c1",
-    "url": "/DianaParvu/static/js/main.b2e722ee.chunk.js"
+    "revision": "c9635f6115b4964d0e56",
+    "url": "/DianaParvu/static/js/main.cb67e83f.chunk.js"
   },
   {
     "revision": "6bd5459b0a190b390d6b6da9b4b3e20f",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaPool.9e1a025a.jpg"
   },
   {
-    "revision": "ef69f1db2126ee136aaf72b9c1f30d77",
+    "revision": "3befaa8c41f290876195aa1fe2b681e4",
     "url": "/DianaParvu/index.html"
   }
 ];

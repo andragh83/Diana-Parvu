@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaVlog2.5c80e879.jpg"
   },
   {
-    "revision": "da9e0973e0f4659c83eb",
+    "revision": "ff2a0d0ff0d1ddb8074e",
     "url": "/DianaParvu/static/css/main.0a1afaa6.chunk.css"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaWorkshop2.b54ff61a.jpg"
   },
   {
-    "revision": "da9e0973e0f4659c83eb",
-    "url": "/DianaParvu/static/js/main.016d6342.chunk.js"
+    "revision": "ff2a0d0ff0d1ddb8074e",
+    "url": "/DianaParvu/static/js/main.558d8b26.chunk.js"
   },
   {
-    "revision": "6bd5459b0a190b390d6b6da9b4b3e20f",
-    "url": "/DianaParvu/static/media/Cover3.6bd5459b.png"
+    "revision": "658b385dd69d11b5093b3dc33bd33e4f",
+    "url": "/DianaParvu/static/media/DianaNobg.658b385d.png"
   },
   {
     "revision": "6beae24251b849e15104ce79709670ca",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/DianaParvu/static/media/DianaPool.9e1a025a.jpg"
   },
   {
-    "revision": "0cd4855df6dc334bea620c3a4e121da9",
+    "revision": "68f72dd39d67b2c99c3864f88e571f27",
     "url": "/DianaParvu/index.html"
   }
 ];

@@ -1,33 +1,55 @@
+ 
+body {
+  margin-bottom: 0px;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
 .App {
-  text-align: center;
+ opacity:0;  
+ animation:fadeIn ease-in 1;
+ animation-fill-mode:forwards;
+ animation-duration:0.5s;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+
+@media only screen and (max-width: 600px) {
+  .avatar {
+  	width: 70px !important;
+    height: 70px !important; 
+    margin-left: 3em !important;
+  		}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/*=== FADE IN  ===*/
+@-webkit-keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

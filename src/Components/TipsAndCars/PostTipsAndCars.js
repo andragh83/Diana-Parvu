@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-
+import DOMPurify from 'dompurify';
 
 const styles = theme => ({
   root: {
@@ -91,8 +91,8 @@ const PostTipsAndCars = (props) => {
                     title="Background"
                   />
             </Card>
-            <div style={{display: displayExcerpt}} className='postari' dangerouslySetInnerHTML={{ __html: postExcerpt }} />
-            <div style={{display: displayContent}} className='postari' dangerouslySetInnerHTML={{ __html: postContent }} />
+            <div style={{display: displayExcerpt}} className='postari' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postExcerpt) }} />
+            <div style={{display: displayContent}} className='postari' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postContent) }} />
             
             <div className={classes.buttonDiv}>
                 <Button className={classes.button} onClick={handleContent}>{readMoreButton}</Button> 

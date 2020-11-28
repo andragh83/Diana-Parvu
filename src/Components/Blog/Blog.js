@@ -35,6 +35,7 @@ class Blog extends React.Component {
  
   componentDidMount() {
     this.fetchData();
+    window.scrollTo(0, 0);
   }
 
   createMarkup(html) {
@@ -83,7 +84,7 @@ class Blog extends React.Component {
                   <Post slug={post.slug}
                         id={post.id}
                         title={Object.values(post.title)}
-                        author={'Diana Parvu'}
+                        author={'Diana Pârvu'}
                         image={post.imagine_postare}
                         date={dataPublicare}
                         category={post.category}
@@ -101,7 +102,7 @@ class Blog extends React.Component {
                     <Post slug={post.slug}
                           id={post.id}
                           title={Object.values(post.title)}
-                          author={'Diana Parvu'}
+                          author={'Diana Pârvu'}
                           image={post.imagine_postare}
                           date={dataPublicare}
                           category={post.category}
@@ -134,8 +135,10 @@ render() {
 
   return (
     <div className={classes.root}>
-      <BlogNavi handleCategory={this.handleCategory}/>
-      {this.renderPosts()}
+      
+        <BlogNavi handleCategory={this.handleCategory}/>
+        {this.renderPosts()}
+      
     </div>
    );
   }

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import './Jumbotron.css';
 
@@ -26,14 +25,18 @@ const styles = theme => ({
       color: '#FFF',
       textShadow: '2px 2px #c71585 ',
     },
+    [theme.breakpoints.up('xl')]: {
+      marginLeft: '15%'
+    },
   },
   description: {
     fontSize: '1.7rem',
-    maxWidth: '80%',
+    maxWidth: '100%',
     marginTop: '-40px',
     textAlign: 'left',
-    lineHeight: '1em',
+    lineHeight: '1.2em',
     padding: '10px',
+    paddingLeft: '30px',
     fontFamily: `'Josefin Sans', sans-serif !important`,
     color: '#c71585',
     textShadow: '2px 2px #FFF ',
@@ -49,7 +52,7 @@ const styles = theme => ({
   button: {
     fontSize: '1.6rem',
     textTransform: 'none !important',
-    maxWidth: '40%',
+    maxWidth: '80%',
     marginTop: '20px',
     background: 'rgba(255,255,255,0.1)',
     textAlign: 'center',
@@ -90,16 +93,18 @@ const Jumbotron =(props)=> {
     <div className="container">
       <Card className={classes.card}>
         <CardContent>
-        {/* <Typography className={classes.sunt}>
-            Numele meu este
-          </Typography> */}
-        <h1>Sunt Diana Parvu</h1>
-          <Typography className={classes.description}>
-            Scriu despre lifestyle, fashion si, mai mult decat atat, stiu sa te invat sa faci arta din discursul tau!
-          </Typography>
+        <h1 className='animate fadeIn one'>Diana Pârvu</h1>
+          <div className={classes.description}>
+            <div className='animate fadeIn two'>TV host</div>
+            <div className='animate fadeIn three'>Jurnalist</div>
+            <div className='animate fadeIn four'>Public Speaking Coach</div>
+            <div className='animate fadeIn five'>{'Fashion & Lifestyle Vlogger'}</div>
+          </div>
+          <div className='animate fadeIn six'>
           <Button className={classes.button} href="#aflamaimulte">
-            Afla mai multe
+            Află mai  multe
           </Button>
+          </div>
         </CardContent>
       </Card>
     </div>

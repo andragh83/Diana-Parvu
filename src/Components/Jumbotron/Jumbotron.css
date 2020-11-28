@@ -37,3 +37,71 @@
 	font: 700 60px 'Dancing Script', cursive !important;
 	}
 }
+
+
+.animate {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+  }
+  
+  /*=== FADE IN  ===*/
+  @-webkit-keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+  
+	to {
+	  opacity: 1;
+	}
+  }
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+  
+	to {
+	  opacity: 1;
+	}
+  }
+  .fadeIn {
+	  -webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+  }
+  
+  .one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  }
+  
+  .two {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+  }
+  
+  .three {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  }
+  
+  .four {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  }
+
+  .five {
+	-webkit-animation-delay: 2.5s;
+	-moz-animation-delay: 2.5s;
+	animation-delay: 2.5s;
+	}
+
+.six {
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+	}

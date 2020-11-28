@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import DOMPurify from 'dompurify';
 import './Post.css'
 
 
@@ -61,18 +62,20 @@ const styles = theme => ({
     borderBottom: '1px solid #000', 
     paddingLeft: '20px',
     paddingRight: '20px',
-    "&:hover": {
-      color: '#c71585',
-      backgroundColor: '#FFF',
-      borderBottom: '1px solid #c71585', 
-    } ,
+    [theme.breakpoints.up('xs')]: {
+      "&:hover": {
+        color: '#c71585',
+        backgroundColor: '#FFF',
+        borderBottom: '1px solid #c71585', 
+      } 
+    },
   }
 });
 
 
 const Post = (props) => {
   
-  const [readMoreButton, setReadMoreButton] = useState('Citeste mai multe...');
+  const [readMoreButton, setReadMoreButton] = useState('Citeşte mai multe...');
   const [displayContent, setDisplayContent] = useState('none');
   const [displayExcerpt, setDisplayExcerpt] = useState(true);
 
@@ -85,7 +88,7 @@ const Post = (props) => {
         if (displayContent && displayExcerpt==='none') { 
           setDisplayContent('none');
           setDisplayExcerpt(true);
-          setReadMoreButton('Citeste mai multe...');
+          setReadMoreButton('Citeşte mai multe...');
         }
       }
 
@@ -100,8 +103,8 @@ const Post = (props) => {
                     title="Background"
                   />
             </Card>
-            <div style={{display: displayExcerpt}} className='postari' dangerouslySetInnerHTML={{ __html: postExcerpt }} />
-            <div style={{display: displayContent}} className='postari' dangerouslySetInnerHTML={{ __html: postContent }} />
+            <div style={{display: displayExcerpt}} className='postari' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postExcerpt) }} />
+            <div style={{display: displayContent}} className='postari' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(postContent)}} />
             
             <div className={classes.buttonDiv}>
                 <Button className={classes.button} onClick={handleContent}>{readMoreButton}</Button> 

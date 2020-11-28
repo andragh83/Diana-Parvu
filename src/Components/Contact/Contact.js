@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import Image4 from '../Images/DianaCameraVideo.jpg';
+import Image from '../Images/DianaContact1.jpeg';
 import IconButton from '@material-ui/core/IconButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 import '../GridContent/GridContent.css';
 import './Contact.css';
 
@@ -17,14 +18,18 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     margin: '5em 2em',
-    height: '80vh',
+    height: '110vh',
     [theme.breakpoints.up('sm')]: {
+      marginTop: '7%',
+      height: '130vh'
+    },
+    [theme.breakpoints.up('md')]: {
         marginTop: '7%',
-        height: '75vh'
+        height: '80vh'
       },
     [theme.breakpoints.up('xl')]: {
           marginTop: '10%',
-          height: '70vh'
+          height: '80vh'
       },
   },
 
@@ -54,13 +59,16 @@ const styles = theme => ({
     },
   paper2: {
     padding: theme.spacing.unit * 2,
-    width: '400px',
-    height: '100px',
-    background: `url(${Image4}) center no-repeat`,
+    width: '500px',
+    height: '300px',
+    background: `url(${Image}) center center no-repeat`,
     backgroundSize: 'contain',
     boxShadow: 'none',
+    margin: '-20px auto',
     [theme.breakpoints.up('sm')]: {
         width: '600px',
+        margin: '0px auto',
+        height: '500px',
     },
     [theme.breakpoints.up('md')]: {
         backgroundSize: 'cover',
@@ -69,13 +77,15 @@ const styles = theme => ({
         marginLeft: '-4em',
         marginTop: '2em',
         width: '70%',
-        height: '200px',
         position: 'relative',
         zIndex: '1',
     },
     [theme.breakpoints.down('xs')]: {
         width: '280px'
     },
+    [theme.breakpoints.up('lg')]: {
+      width: '50%',
+  },
   },
   paper3: {
     padding: theme.spacing.unit * 2, 
@@ -86,8 +96,8 @@ const styles = theme => ({
     [theme.breakpoints.up('md')]: {
         paddingLeft: '1em',
         paddingTop: '1.5em',
-        marginTop: '-5em',
-        marginLeft: '7em',
+        marginTop: '-15em',
+        marginLeft: '2em',
         textAlign: 'left', 
         width: '100%',
         border: '2px solid #c71585',
@@ -97,8 +107,8 @@ const styles = theme => ({
     [theme.breakpoints.up('lg')]: {
         paddingLeft: '1em',
         paddingTop: '1.5em',
-        marginTop: '-5em',
-        marginLeft: '10em',
+        marginTop: '-15em',
+        marginLeft: '7em',
         textAlign: 'left', 
         width: '85%',
         border: '2px solid #c71585',
@@ -139,10 +149,11 @@ const styles = theme => ({
 });
 
 
-const GridContent =(props) => {
+const Contact =(props) => {
 
   const { classes } = props;
 
+  useEffect(()=>{window.scrollTo(0, 0)})
 
   return (
     <div className={classes.root}>
@@ -151,7 +162,7 @@ const GridContent =(props) => {
         
         <Grid item xs={12}  md={6}>
         <Paper className={classes.paper1}>
-          Ma gasesti pe:
+          Mă găsești pe:
         </Paper>
         </Grid>
 
@@ -181,7 +192,7 @@ const GridContent =(props) => {
               <a href="https://www.youtube.com/channel/UCrZix_xgK124SQbAUWsy14g" style={{color: '#c71585'}}>Youtube</a>  
             </div>
             <div className={classes.mail}>
-              Sau poti sa-mi scrii la prvdiana[at]yahoo.com
+              Sau poţi să-mi scrii la prvdiana[at]yahoo.com
             </div>
             
           
@@ -189,13 +200,13 @@ const GridContent =(props) => {
         </Grid>
 
       </Grid>
-
+    
     </div>
   );
 }
 
-GridContent.propTypes = {
+Contact.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GridContent);
+export default withStyles(styles)(Contact);

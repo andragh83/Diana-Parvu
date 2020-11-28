@@ -13,16 +13,16 @@
     "@material-ui/styles": "^4.4.1",
     "@material-ui/system": "^4.5.1",
     "axios": "^0.19.0",
+    "dompurify": "^2.0.7",
     "node-sass": "^4.12.0",
     "npm": "^6.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
     "react-scrollable-anchor": "^0.6.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3008 react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

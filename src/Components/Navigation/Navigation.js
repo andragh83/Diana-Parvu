@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -96,6 +95,9 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  menuNavLink: {
+    textDecoration: 'none',
+  }
 });
 
 class Navigation extends React.Component {
@@ -123,7 +125,9 @@ class Navigation extends React.Component {
 
   render() {
     const { mobileMoreAnchorEl } = this.state;
-    const { classes } = this.props;
+
+    const { classes, onRouteChange } = this.props;
+
     // const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -135,23 +139,37 @@ class Navigation extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMobileMenuClose} component={Link} to="/DianaParvu/blog">
-          <p className={classes.menuButton}>Blog</p>
+        
+          <MenuItem onClick={this.handleMobileMenuClose}>
+            <p className={classes.menuButton} onClick={() => onRouteChange('blog')}>Blog</p>
+          </MenuItem>
+        
+
+       
+          <MenuItem onClick={this.handleMobileMenuClose}>
+            <p className={classes.menuButton} onClick={() => onRouteChange('vlog')}>Vlog</p>
+          </MenuItem>
+       
+
+        
+        <MenuItem onClick={this.handleMobileMenuClose}>
+             <p className={classes.menuButton} onClick={() => onRouteChange('workshops')}>Workshops</p>
         </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose} component={Link} to="/DianaParvu/vlog">
-          <p className={classes.menuButton}>Vlog</p>
-        </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose} component={Link} to="/DianaParvu/workshop">
-             <p className={classes.menuButton}>Workshops</p>
-        </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose} component={Link} to="/DianaParvu/tipsandcars">
+        
+
+        
+        <MenuItem onClick={this.handleMobileMenuClose}>
            <Tooltip style={{fontWeight: 'bold', fontStyle: 'italic', color: '#000'}} title="by Sergiu Negotiu Piloff" TransitionComponent={Zoom}>
-             <p className={classes.menuButton}>{'Tips&Cars'}</p>
+             <p className={classes.menuButton} onClick={() => onRouteChange('tipsAndCars')}>{'Tips&Cars'}</p>
             </Tooltip>
         </MenuItem>
-        <MenuItem onClick={this.handleMobileMenuClose} component={Link} to="/DianaParvu/contact">
-          <p className={classes.menuButton}>Contact</p>
-        </MenuItem>
+        
+
+        
+          <MenuItem onClick={this.handleMobileMenuClose}>
+            <p className={classes.menuButton} onClick={() => onRouteChange('contact')}>Contact</p>
+          </MenuItem>
+        
       </Menu>
     );
 
@@ -161,33 +179,44 @@ class Navigation extends React.Component {
 
           <AppBar position="fixed" style={{background: '#FFF', boxShadow: 'none'}}>
             <Toolbar>
+            
               <Button 
                 className={classes.title} 
                 color="inherit" 
-                component={Link} to="/DianaParvu/"
+                onClick={() => onRouteChange('home')}
                 >
                 Home
               </Button>
+              
 
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <Button component={Link} to="/DianaParvu/blog" className={classes.menuButton} color="inherit">
-                  <div className='menuLink'>Blog</div>
-                </Button>
-                <Button component={Link} to="/DianaParvu/vlog" className={classes.menuButton} color="inherit">
-                <div className='menuLink'>Vlog</div>
-                </Button>
-                <Button component={Link} to="/DianaParvu/workshop" className={classes.menuButton} color="inherit">
-                <div className='menuLink'>Workshops</div>
-                </Button>
-                <Tooltip style={{fontWeight: 'bold', fontStyle: 'italic', color: '#000'}} title="by Sergiu Negotiu Piloff" TransitionComponent={Zoom}>
-                  <Button component={Link} to="/DianaParvu/tipsandcars" className={classes.menuButton} color="inherit">
-                  <div className='menuLink'>{'Tips&Cars'}</div>
+                
+                  <Button className={classes.menuButton} color="inherit" onClick={() => onRouteChange('blog')} >
+                    <div className='menuLink'>Blog</div>
                   </Button>
-                </Tooltip>
-                <Button component={Link} to="/DianaParvu/contact" className={classes.menuButton} color="inherit">
-                <div className='menuLink'>Contact</div>
-                </Button>
+                
+                
+                  <Button className={classes.menuButton} color="inherit" onClick={() => onRouteChange('vlog')}>
+                  <div className='menuLink'>Vlog</div>
+                  </Button>
+               
+                
+                  <Button className={classes.menuButton} color="inherit" onClick={() => onRouteChange('workshops')}>
+                  <div className='menuLink'>Workshops</div>
+                  </Button>
+                
+                
+                  <Tooltip style={{fontWeight: 'bold', fontStyle: 'italic', color: '#000'}} title="by Sergiu Negoţiu Piloff" TransitionComponent={Zoom} onClick={() => onRouteChange('tipsAndCars')}>
+                    <Button className={classes.menuButton} color="inherit">
+                    <div className='menuLink'>{'Tips&Cars'}</div>
+                    </Button>
+                  </Tooltip>
+                
+                  <Button className={classes.menuButton} color="inherit" onClick={() => onRouteChange('contact')}>
+                  <div className='menuLink'>Contact</div>
+                  </Button>
+                
               </div>
               <div className={classes.sectionMobile}>
                 <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">

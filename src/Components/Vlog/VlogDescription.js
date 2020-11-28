@@ -44,7 +44,7 @@ class Vlog extends React.Component {
         return (
         <VlogDescriptionLayout title={title.rendered} content={content.rendered}/>
         )
-      } else {console.log('No state yet!!!')}
+      }
   }
 
 render() {

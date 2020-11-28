@@ -73,6 +73,7 @@ class TipsAndCars extends React.Component {
  
   componentDidMount() {
     this.fetchData();
+    window.scrollTo(0, 0);
   }
 
   createMarkup(html) {
@@ -109,7 +110,7 @@ class TipsAndCars extends React.Component {
                             <PostTipsAndCars slug={post.slug}
                                 id={post.id}
                                 title={Object.values(post.title)}
-                                author={'Sergiu Negotiu Piloff'}
+                                author={'Sergiu Negoţiu Piloff'}
                                 image={post.f_img_url}
                                 date={dataPublicare}
                                 category={''}
@@ -138,12 +139,14 @@ class TipsAndCars extends React.Component {
         
         return (
             <div className={classes.root}>
+             
                 <div className={classes.container}>
                     <p className={classes.containerTitle}>Auto Moto Tips and Tricks</p> 
                     <div className='lineLoad'></div>
-                    <p className={classes.containerAuthor}>by Sergiu Negotiu Piloff</p>
+                    <p className={classes.containerAuthor}>by Sergiu Negoţiu Piloff</p>
                 </div>
                 {this.renderPosts()}
+              
             </div>
         );
     }

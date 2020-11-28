@@ -6,7 +6,6 @@ import VlogPost from '../VlogPost/VlogPost';
 import VlogItem from '../VlogItem/VlogItem';
 import VlogDescription from './VlogDescription';
 
-
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -55,6 +54,7 @@ class Vlog extends React.Component {
  
   componentDidMount() {
     this.fetchData();
+    window.scrollTo(0, 0);
   }
 
   createMarkup(html) {
@@ -102,8 +102,10 @@ render() {
 
   return (
     <div className={classes.root}>
-      <VlogDescription />
-      {this.renderPosts()}
+      
+        <VlogDescription />
+        {this.renderPosts()}
+      
     </div>
    );
   }

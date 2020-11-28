@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
+import DOMPurify from 'dompurify';
 
 const styles = theme => ({
   root: {
@@ -24,7 +24,8 @@ const styles = theme => ({
     },
   },
   description: {
-    fontSize: '1.2em',
+    fontSize: '26px',
+    fontFamily: `'Josefin Sans', sans-serif !important`,
     maxWidth: '70%',
     margin: '0 auto',
     [theme.breakpoints.down('xs')]: {
@@ -42,7 +43,7 @@ const { classes } = props;
     <div className={classes.root}>
       <div className={classes.container}>
             <h1 className={classes.title}>{props.title}</h1>
-            <Typography className={classes.description} dangerouslySetInnerHTML={{ __html: props.content }} />
+            <Typography className={classes.description} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(props.content) }} />
         </div>
     </div>
    );

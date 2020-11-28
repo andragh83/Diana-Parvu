@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -7,7 +6,8 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { removeHash } from 'react-scrollable-anchor'
 import Image1 from '../Images/DianaLifestyle.jpg';
 import Image2 from '../Images/DianaWorkshop2.jpg';
 import Image3 from '../Images/DianaVlog2.jpg';
@@ -44,18 +44,20 @@ const styles = theme => ({
 
 const GridContent =(props) => {
 
-  const { classes } = props;
+  const { classes, onRouteChange } = props;
 
-
+  removeHash()
+  
   return (
     <div className={classes.root}>
       
       <Grid container spacing={40}>
-      
+       
         <Grid item xs={12} sm={6} lg={3}>
         <ScrollableAnchor id={'aflamaimulte'}>
-            <Card className={classes.card} >
-              <CardActionArea component={Link} to="/DianaParvu/blog">
+            <Card className={classes.card} onClick={() => onRouteChange('blog')}>
+              
+              <CardActionArea>
                 <div className='grow'>
                   <CardMedia
                     className={classes.media}
@@ -63,17 +65,19 @@ const GridContent =(props) => {
                     title="Background"
                   />
                   <span className="items">Blog</span>
-                  <span className="items2">Aici scriu</span>
+                  <span className="items2">Hai să stăm de vorbă!</span>
                 </div>
               </CardActionArea>
-            </Card>
-          </ScrollableAnchor>
-        </Grid>
+            
+          </Card>
+        </ScrollableAnchor>
+      </Grid>
       
         
         <Grid item xs={12} sm={6} lg={3}>
-        <Card className={classes.card}>
-              <CardActionArea component={Link} to="/DianaParvu/vlog">
+        <Card className={classes.card} onClick={() => onRouteChange('vlog')}>
+          
+              <CardActionArea>
                 <div className='grow'>
                   <CardMedia
                     className={classes.media}
@@ -81,15 +85,17 @@ const GridContent =(props) => {
                     title="Vlog"
                   />
                 <span className="items">Vlog</span>
-                <span className="items2">Joy cu Diana Parvy</span>
+                <span className="items2">Joy cu Diana Pârvu</span>
                 </div>
               </CardActionArea>
-            </Card>
+            
+          </Card>
         </Grid>
 
         <Grid item xs={12} sm={6} lg={3}>
-          <Card className={classes.card} >
-              <CardActionArea component={Link} to="/DianaParvu/workshop"> 
+          <Card className={classes.card} onClick={() => onRouteChange('workshops')}>
+            
+              <CardActionArea> 
                 <div className='grow'>
                   <CardMedia
                     className={classes.media}
@@ -97,15 +103,17 @@ const GridContent =(props) => {
                     title="Workshop"
                   />
                   <span className="items">Workshops</span>
-                  <span className="items2">Fa arta din discursul tau</span>
+                  <span className="items2">Fă artă din discursul tău</span>
                 </div> 
               </CardActionArea>
-            </Card>
+            
+          </Card>
         </Grid>
 
         <Grid item xs={12} sm={6} lg={3}>
-          <Card className={classes.card} >
-              <CardActionArea component={Link} to="/DianaParvu/tipsandcars"> 
+          <Card className={classes.card} onClick={() => onRouteChange('tipsAndCars')}>
+            
+              <CardActionArea> 
                 <div className='grow'>
                   <CardMedia
                     className={classes.media}
@@ -113,11 +121,12 @@ const GridContent =(props) => {
                     title="Workshop"
                   />
                   <span className="items">{'Tips&Cars'}</span>
-                  <span className="items2">{'by Sergiu Negotiu Piloff'}</span>
+                  <span className="items2">{'by Sergiu Negoţiu Piloff'}</span>
                 
                 </div> 
               </CardActionArea>
-            </Card>
+            
+          </Card>
         </Grid>
 
       </Grid>
